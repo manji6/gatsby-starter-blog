@@ -21,6 +21,9 @@ const SEO = ({ description, lang, meta, title }) => {
             social {
               twitter
             }
+            tagmanager {
+              launch
+            }
           }
         }
       }
@@ -70,6 +73,12 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
+      script={[
+        {
+          src: site.siteMetadata.tagmanager.launch,
+          async: true
+        }
+      ]}
     />
   )
 }

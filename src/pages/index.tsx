@@ -38,6 +38,10 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+      <div>
+        <p>Please update "siteMetadata.tagmanager.launch" path in gatsby-config.js</p>
+        <p>if updated, please remove this message(in pages/index.tsx)</p>
+      </div>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
