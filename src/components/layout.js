@@ -7,7 +7,7 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
-  if (location.pathname === rootPath) {
+  if (location.pathname === rootPath || location.pathname.indexOf("api_pages") > -1) {
     header = (
       <h1
         style={{

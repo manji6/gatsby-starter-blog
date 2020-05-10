@@ -10,6 +10,10 @@ module.exports = {
     social: {
       twitter: `kylemathews`,
     },
+    tagmanager: {
+      launch: "//assets.adobedtm.com/==PLEASE-FIXED-LAUNCH-JS-PATH==/==AND-FILE-NAME==.min.js"
+    }
+
   },
   plugins: [
     {

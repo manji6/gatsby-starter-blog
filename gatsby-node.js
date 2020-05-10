@@ -48,6 +48,28 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // Added page
+  const page_node = [
+    {
+      path: "api_pages/1",
+      date: "2020/05/10",
+      title: "use createPagesAPI in GatsbyJS: page1"
+    }
+  ];
+
+  page_node.forEach(page =>
+    createPage({
+      path: page.path,
+      component: path.resolve('src/templates/page_template.js'),
+      context: {
+        path: page.path,
+        date: page.date,
+        title: page.title
+      }
+    })
+  );
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
